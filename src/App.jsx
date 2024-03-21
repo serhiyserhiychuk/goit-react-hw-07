@@ -9,7 +9,7 @@ import Loader from "./components/Loader/Loader";
 
 const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
+  const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const App = () => {
         <h1>Phonebook</h1>
         <ContactForm />
         <SearchBox />
-        {isLoading && !error && <Loader />}
+        {loading && !error && <Loader />}
         <ContactList />
       </div>
     </>
